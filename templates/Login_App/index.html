@@ -1,5 +1,10 @@
 {% extends "Login_App/base.html" %}
 
 {% block body_block %}
-<h1>Hello world</h1>
+    {% if user.is_authenticated %}
+    <p>{{ user_info.username }}</p>
+    {% else %}
+    <p>Simple auth app</p>
+    {% endif %}
+    
 {% endblock  %}
