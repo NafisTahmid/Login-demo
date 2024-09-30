@@ -18,15 +18,21 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
+          <div class="collapse navbar-collapse ms-auto" id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
               <a class="nav-link text-light" href="{% url 'Login_App:home' %}">Home</a>
+            </div>
+            <div class="navbar-nav ">
+              <a class="nav-link text-light" href="{% url 'Login_App:register' %}">Register</a>
             </div>
           </div>
         </div>
       </nav>
-    {% block body_block %}
+      <div class="container pt-5">
+        {% block body_block %}
     
-    {% endblock  %}
+        {% endblock  %}
+      </div>
+   
 </body>
 </html>
